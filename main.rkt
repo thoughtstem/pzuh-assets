@@ -1,5 +1,10 @@
 #lang racket/base
 
-(provide (all-from-out "characters.rkt"))
+(require define-assets-from)
 
-(require "characters.rkt")
+(also-for-asset-docs
+ #:asset-modules ("characters.rkt")
+
+ (provide (all-from-out "characters.rkt"))
+
+ (require "characters.rkt"))

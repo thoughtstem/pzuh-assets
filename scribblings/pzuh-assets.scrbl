@@ -2,10 +2,10 @@
 @require[@for-label[pzuh-assets
                     racket/base]]
 
-@(require scribble/extract)
+@(require scribble/extract
+          define-assets-from)
 
 @title{pzuh-assets}
-@;author{saralucchini}
 
 @defmodule[pzuh-assets]
 
@@ -15,4 +15,6 @@ Assets by Zuhria Alfitra a.k.a pzUH -- @(url "www.gameart2d.com")
 
 @section{Characters}
 
-@(include-extracted "../characters.rkt")
+@(require (submod pzuh-assets/characters asset-docs)) 
+@(doc-all (submod pzuh-assets/characters asset-docs)) 
+
